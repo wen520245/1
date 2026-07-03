@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程管理 - 华商创新班成绩管理系统</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Microsoft YaHei', sans-serif; background: #f5f7fa; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 16px 24px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .header h1 { font-size: 20px; font-weight: 600; }
+        .nav { display: flex; gap: 16px; margin-top: 8px; }
+        .nav a { color: rgba(255,255,255,0.9); text-decoration: none; padding: 6px 12px; border-radius: 4px; transition: all 0.3s; }
+        .nav a:hover { background: rgba(255,255,255,0.2); }
+        .nav a.active { background: rgba(255,255,255,0.3); }
+        .container { padding: 24px; max-width: 1400px; margin: 0 auto; }
+        .search-bar { display: flex; gap: 12px; margin-bottom: 20px; }
+        .search-bar input { flex: 1; padding: 12px 16px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px; }
+        .search-bar button { padding: 12px 24px; background: #667eea; color: white; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s; }
+        .search-bar button:hover { background: #5568d3; }
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        th, td { padding: 14px 16px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background: #f8f9fa; font-weight: 600; color: #555; }
+        tr:hover { background: #f8f9fa; }
+        .action-btn { padding: 6px 12px; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; margin-right: 6px; }
+        .edit-btn { background: #fff3e0; color: #e65100; }
+        .delete-btn { background: #ffebee; color: #c62828; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📚 课程管理</h1>
+        <div class="nav">
+            <a href="index.html">数据概览</a>
+            <a href="student.html">学生管理</a>
+            <a href="#" class="active">课程管理</a>
+            <a href="score.html">成绩管理</a>
+            <a href="analysis.html">数据分析</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" placeholder="搜索课程名称或编号...">
+            <button>搜索</button>
+            <button style="background: #43e97b;">添加课程</button>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>课程编号</th>
+                    <th>课程名称</th>
+                    <th>学分</th>
+                    <th>学时</th>
+                    <th>授课教师</th>
+                    <th>开课学期</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>CS2024001</td><td>计算机前沿技术</td><td>2</td><td>32</td><td>任课教师</td><td>2024-2025第二学期</td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+                <tr><td>CS2024002</td><td>高等数学</td><td>6</td><td>96</td><td>李教授</td><td>2023-2024第一学期</td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+                <tr><td>CS2024003</td><td>线性代数</td><td>4</td><td>64</td><td>王教授</td><td>2023-2024第一学期</td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+                <tr><td>CS2024004</td><td>概率论</td><td>4</td><td>64</td><td>张教授</td><td>2023-2024第二学期</td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+                <tr><td>CS2024005</td><td>计算机基础</td><td>3</td><td>48</td><td>刘教授</td><td>2023-2024第一学期</td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+                <tr><td>CS2024006</td><td>程序设计</td><td>4</td><td>64</td><td>陈教授</td><td>2023-2024第一学期</td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+                <tr><td>CS2024007</td><td>数据结构</td><td>4</td><td>64</td><td>赵教授</td><td>2023-2024第二学期</td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+                <tr><td>CS2024008</td><td>数据库</td><td>4</td><td>64</td><td>孙教授</td><td>2023-2024第二学期</td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

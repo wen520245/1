@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成绩管理 - 华商创新班成绩管理系统</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Microsoft YaHei', sans-serif; background: #f5f7fa; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 16px 24px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .header h1 { font-size: 20px; font-weight: 600; }
+        .nav { display: flex; gap: 16px; margin-top: 8px; }
+        .nav a { color: rgba(255,255,255,0.9); text-decoration: none; padding: 6px 12px; border-radius: 4px; transition: all 0.3s; }
+        .nav a:hover { background: rgba(255,255,255,0.2); }
+        .nav a.active { background: rgba(255,255,255,0.3); }
+        .container { padding: 24px; max-width: 1400px; margin: 0 auto; }
+        .filter-bar { display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+        .filter-bar select, .filter-bar input { padding: 12px 16px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px; }
+        .filter-bar button { padding: 12px 24px; background: #667eea; color: white; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s; }
+        .filter-bar button:hover { background: #5568d3; }
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        th, td { padding: 14px 16px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background: #f8f9fa; font-weight: 600; color: #555; }
+        tr:hover { background: #f8f9fa; }
+        .score-pass { color: #2e7d32; font-weight: 600; }
+        .score-fail { color: #c62828; font-weight: 600; }
+        .action-btn { padding: 6px 12px; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; margin-right: 6px; }
+        .edit-btn { background: #fff3e0; color: #e65100; }
+        .delete-btn { background: #ffebee; color: #c62828; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📝 成绩管理</h1>
+        <div class="nav">
+            <a href="index.html">数据概览</a>
+            <a href="student.html">学生管理</a>
+            <a href="course.html">课程管理</a>
+            <a href="#" class="active">成绩管理</a>
+            <a href="analysis.html">数据分析</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="filter-bar">
+            <select><option>选择课程</option><option>计算机前沿技术</option><option>高等数学</option><option>线性代数</option><option>概率论</option><option>计算机基础</option><option>程序设计</option><option>数据结构</option><option>数据库</option></select>
+            <input type="text" placeholder="搜索学生姓名...">
+            <button>查询</button>
+            <button style="background: #43e97b;">批量导入</button>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>学号</th>
+                    <th>姓名</th>
+                    <th>课程名称</th>
+                    <th>讨论(20%)</th>
+                    <th>作业(30%)</th>
+                    <th>签到(10%)</th>
+                    <th>课程积分(20%)</th>
+                    <th>分组任务(20%)</th>
+                    <th>综合成绩</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>423830109</td><td>梁灿麟</td><td>计算机前沿技术</td><td>10.0</td><td>30.0</td><td>10.0</td><td>12.8</td><td>20.0</td><td class="score-pass">62.80</td><td>及格</td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+                <tr><td>423830223</td><td>温名伟</td><td>计算机前沿技术</td><td>10.0</td><td>28.0</td><td>10.0</td><td>13.72</td><td>20.0</td><td class="score-pass">61.72</td><td>及格</td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+                <tr><td>423830226</td><td>胡一凡</td><td>计算机前沿技术</td><td>10.0</td><td>28.0</td><td>10.0</td><td>11.8</td><td>20.0</td><td class="score-fail">59.80</td><td>不及格</td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+                <tr><td>423830115</td><td>黄世铭</td><td>计算机前沿技术</td><td>10.0</td><td>25.0</td><td>10.0</td><td>11.2</td><td>20.0</td><td class="score-fail">56.20</td><td>不及格</td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+                <tr><td>423830225</td><td>陈灿</td><td>计算机前沿技术</td><td>10.0</td><td>24.0</td><td>10.0</td><td>11.78</td><td>20.0</td><td class="score-fail">55.78</td><td>不及格</td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+                <tr><td>423830104</td><td>曾小菊</td><td>计算机前沿技术</td><td>10.0</td><td>20.0</td><td>10.0</td><td>13.2</td><td>20.0</td><td class="score-fail">52.80</td><td>不及格</td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+                <tr><td>423830112</td><td>杜彦苇</td><td>计算机前沿技术</td><td>10.0</td><td>20.0</td><td>10.0</td><td>13.2</td><td>20.0</td><td class="score-fail">52.80</td><td>不及格</td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+                <tr><td>423830207</td><td>李昊</td><td>计算机前沿技术</td><td>10.0</td><td>20.0</td><td>10.0</td><td>12.32</td><td>20.0</td><td class="score-fail">52.32</td><td>不及格</td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+                <tr><td>423830124</td><td>郑淇元</td><td>计算机前沿技术</td><td>10.0</td><td>20.0</td><td>10.0</td><td>12.0</td><td>20.0</td><td class="score-fail">51.60</td><td>不及格</td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+                <tr><td>423830125</td><td>麦梓峰</td><td>计算机前沿技术</td><td>10.0</td><td>20.0</td><td>10.0</td><td>11.59</td><td>20.0</td><td class="score-fail">51.59</td><td>不及格</td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

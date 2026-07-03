@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生管理 - 华商创新班成绩管理系统</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Microsoft YaHei', sans-serif; background: #f5f7fa; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 16px 24px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .header h1 { font-size: 20px; font-weight: 600; }
+        .nav { display: flex; gap: 16px; margin-top: 8px; }
+        .nav a { color: rgba(255,255,255,0.9); text-decoration: none; padding: 6px 12px; border-radius: 4px; transition: all 0.3s; }
+        .nav a:hover { background: rgba(255,255,255,0.2); }
+        .nav a.active { background: rgba(255,255,255,0.3); }
+        .container { padding: 24px; max-width: 1400px; margin: 0 auto; }
+        .search-bar { display: flex; gap: 12px; margin-bottom: 20px; }
+        .search-bar input { flex: 1; padding: 12px 16px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px; }
+        .search-bar button { padding: 12px 24px; background: #667eea; color: white; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s; }
+        .search-bar button:hover { background: #5568d3; }
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        th, td { padding: 14px 16px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background: #f8f9fa; font-weight: 600; color: #555; }
+        tr:hover { background: #f8f9fa; }
+        .status-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 500; }
+        .status-active { background: #e8f5e9; color: #2e7d32; }
+        .status-inactive { background: #ffebee; color: #c62828; }
+        .action-btn { padding: 6px 12px; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; margin-right: 6px; }
+        .edit-btn { background: #fff3e0; color: #e65100; }
+        .delete-btn { background: #ffebee; color: #c62828; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>👥 学生管理</h1>
+        <div class="nav">
+            <a href="index.html">数据概览</a>
+            <a href="#" class="active">学生管理</a>
+            <a href="course.html">课程管理</a>
+            <a href="score.html">成绩管理</a>
+            <a href="analysis.html">数据分析</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" placeholder="搜索学生姓名或学号...">
+            <button>搜索</button>
+            <button style="background: #43e97b;">添加学生</button>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>学号</th>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>年级</th>
+                    <th>班级</th>
+                    <th>联系电话</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>423830109</td><td>梁灿麟</td><td>男</td><td>2023级</td><td>创新实验班</td><td>13800138001</td><td><span class="status-badge status-active">在读</span></td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+                <tr><td>423830223</td><td>温名伟</td><td>男</td><td>2023级</td><td>创新实验班</td><td>13800138002</td><td><span class="status-badge status-active">在读</span></td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+                <tr><td>423830226</td><td>胡一凡</td><td>男</td><td>2023级</td><td>创新实验班</td><td>13800138003</td><td><span class="status-badge status-active">在读</span></td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+                <tr><td>423830115</td><td>黄世铭</td><td>男</td><td>2023级</td><td>创新实验班</td><td>13800138004</td><td><span class="status-badge status-active">在读</span></td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+                <tr><td>423830225</td><td>陈灿</td><td>男</td><td>2023级</td><td>创新实验班</td><td>13800138005</td><td><span class="status-badge status-active">在读</span></td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+                <tr><td>423830104</td><td>曾小菊</td><td>女</td><td>2023级</td><td>创新实验班</td><td>13800138006</td><td><span class="status-badge status-active">在读</span></td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+                <tr><td>423830112</td><td>杜彦苇</td><td>女</td><td>2023级</td><td>创新实验班</td><td>13800138007</td><td><span class="status-badge status-active">在读</span></td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+                <tr><td>423830207</td><td>李昊</td><td>男</td><td>2023级</td><td>创新实验班</td><td>13800138008</td><td><span class="status-badge status-active">在读</span></td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+                <tr><td>423830124</td><td>郑淇元</td><td>男</td><td>2023级</td><td>创新实验班</td><td>13800138009</td><td><span class="status-badge status-active">在读</span></td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+                <tr><td>423830125</td><td>麦梓峰</td><td>男</td><td>2023级</td><td>创新实验班</td><td>13800138010</td><td><span class="status-badge status-active">在读</span></td><td><button class="action-btn edit-btn">编辑</button><button class="action-btn delete-btn">删除</button></td></tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
